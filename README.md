@@ -9,7 +9,7 @@ A macro to declare the VERSION constant from the value found in `shard.yml`, so 
    ```yaml
    dependencies:
      version:
-       github: your-github-user/version
+       github: hugopl/version.cr
    ```
 
 2. Run `shards install`
