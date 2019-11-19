@@ -1,4 +1,4 @@
-module Version
+module VersionFromShard
   macro declare
     {{ run("./extract_version") }}
   end

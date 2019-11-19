@@ -1,4 +1,4 @@
-# Version
+# Version From Shard
 
 A macro to declare the VERSION constant from the value found in `shard.yml`, so you don't need to write the same version number in multiple places.
 
@@ -9,7 +9,7 @@ A macro to declare the VERSION constant from the value found in `shard.yml`, so 
    ```yaml
    dependencies:
      version:
-       github: hugopl/version.cr
+       github: hugopl/version_from_shard
    ```
 
 2. Run `shards install`
@@ -18,10 +18,10 @@ A macro to declare the VERSION constant from the value found in `shard.yml`, so 
 
 
 ```crystal
-require "version"
+require "version_from_shard"
 
 module MyAwesomeApp
-  Version.declare
+  VersionFromShard.declare
 end
 
 puts MyAwesomeApp::VERSION
@@ -33,7 +33,7 @@ Suggestions are welcome.
 
 ## Contributing
 
-1. Fork it (<https://github.com/hugopl/version/fork>)
+1. Fork it (<https://github.com/hugopl/version_from_shard/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

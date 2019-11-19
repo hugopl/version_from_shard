@@ -1,2 +1,2 @@
 require "spec"
-require "../src/version"
+require "../src/version_from_shard"
