@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hugopl/version_from_shard.svg?branch=master)](https://travis-ci.org/hugopl/version_from_shard)
+
 # Version From Shard
 
 A macro to declare the VERSION constant from the value found in `shard.yml`, so you don't need to write the same version number in multiple places.
