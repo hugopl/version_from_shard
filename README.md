@@ -24,8 +24,16 @@ module MyAwesomeApp
   VersionFromShard.declare
 end
 
-puts MyAwesomeApp::VERSION
+puts MyAwesomeApp::VERSION # Should print the version value found in shard.yml, e.g. "1.0.0"
 ```
+
+If you are compiling a development version, i.e. not a tagged commit, the version will try to
+use `git describe --tags` output (ignoring tag prefixes) for the version string. If git isn't
+found or someone is compiling the project from a tarball, normal version will be used.
+
+Example:
+
+You have `version: 1.0.0` on your shard.yml file but your master branch is 1 commit ahead of the tag named `v1.0.0` that you released yesterday, in this case VersionFromShard.declare will declare a VERSION constant with the value `1.0.0-1-g2dd5299`, assuming `g2dd5299` is the current commit hash.
 
 ## Development
 
