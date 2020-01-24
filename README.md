@@ -10,7 +10,7 @@ A macro to declare the VERSION constant from the value found in `shard.yml`, so 
 
    ```yaml
    dependencies:
-     version:
+     version_from_shard:
        github: hugopl/version_from_shard
    ```
 
