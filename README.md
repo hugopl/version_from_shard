@@ -33,7 +33,7 @@ If you are developing a library is necessary to pass __DIR__ to the declare macr
 application using your library it will show the version of the application instead the version of your library.
 So, on libraries do:
 
-```
+```crystal
 module MyAwesomeLib
   VersionFromShard.declare(__DIR__)
 end
