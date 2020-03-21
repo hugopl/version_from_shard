@@ -29,7 +29,20 @@ end
 puts MyAwesomeApp::VERSION # Should print the version value found in shard.yml, e.g. "1.0.0"
 ```
 
-If you are compiling a development version, i.e. not a tagged commit, the version will try to
+If you are developing a library is necessary to pass __DIR__ to the declare macro, otherwise when compiling a
+application using your library it will show the version of the application instead the version of your library.
+So, on libraries do:
+
+```
+module MyAwesomeLib
+  VersionFromShard.declare(__DIR__)
+end
+
+# Then, the App code can safely do:
+puts "Awesome app v#{MyAwesomeApp::VERSION} using awesome lib v#{MyAwesomeLib::VERSION}"
+```
+
+When compiling a development version, i.e. not a tagged commit, the version will try to
 use `git describe --tags` output (ignoring tag prefixes) for the version string. If git isn't
 found or someone is compiling the project from a tarball, normal version will be used.
 

@@ -1,6 +1,6 @@
 module VersionFromShard
-  macro declare
-    {{ run("./extract_version") }}
+  macro declare(dir = "")
+    {{ run("./extract_version", dir) }}
   end
 
   extend self

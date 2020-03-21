@@ -1,20 +1,29 @@
 require "yaml"
 
-def extract_version
+def extract_version(dir : String) : String
+  if dir.empty?
+    dir = Dir.current
+    skip_git = false
+  else
+    skip_git = true
+  end
+
   version = ""
-  dir_components = Path.new(Dir.current).parts.size
-  dir_components.times do
-    if File.exists?("shard.yml")
-      version = YAML.parse(File.read("shard.yml"))["version"].to_s
-      break
-    else
-      Dir.cd("..")
+  dir_components = Path.new(dir).parts.size
+  Dir.cd(dir) do
+    dir_components.times do
+      if File.exists?("shard.yml")
+        version = YAML.parse(File.read("shard.yml"))["version"].to_s
+        break
+      else
+        Dir.cd("..")
+      end
     end
   end
 
   raise "File not found or empty version string." if version.empty?
 
-  try_git_describe(version)
+  skip_git ? version : try_git_describe(version)
 rescue e
   abort("Error reading shard.yml: #{e.message}")
 end
@@ -33,5 +42,5 @@ rescue Errno
   version
 end
 
-version = extract_version
+version = extract_version(ARGV[0])
 puts "VERSION = \"#{version}\""
