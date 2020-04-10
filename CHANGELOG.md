@@ -1,5 +1,13 @@
+## [1.2.2] - 2020-04-10
+### Fixed
+- Fix bad release (forgot to change version number on shard.yml)
+
+## [1.2.1] - 2020-04-10
+### Fixed
+- Fixed compilation on Crystal 0.34.0.
+
 ## [1.2.0] - 2020-03-20
-### Fix
+### Fixed
 - Fix declaration of VERSION constant on libraries.
 
 ## [1.1.0] - 2019-12-21

@@ -38,7 +38,7 @@ def try_git_describe(version)
   return version if idx.nil?
 
   output[idx..-1]
-rescue Errno
+rescue RuntimeError
   version
 end
 
