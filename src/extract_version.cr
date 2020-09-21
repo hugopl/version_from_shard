@@ -37,7 +37,7 @@ def try_git_describe(version)
   idx = output.index(version)
   return version if idx.nil?
 
-  output[idx..-1]
+  output[idx..-1].tr("-", "+")
 rescue RuntimeError
   version
 end

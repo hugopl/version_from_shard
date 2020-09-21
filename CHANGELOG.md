@@ -1,6 +1,6 @@
-## [1.2.2] - 2020-04-10
+## [1.2.2] - 2020-09-20
 ### Fixed
-- Fix bad release (forgot to change version number on shard.yml)
+- Generates a semantic version friendly version number when using git describe (i.e. replace "-" by "+").
 
 ## [1.2.1] - 2020-04-10
 ### Fixed
