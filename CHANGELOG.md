@@ -1,3 +1,7 @@
+## [1.2.3] - 2021-03-22
+### Fixed
+- Just read the semantic version spec to notice that the build part can't have a "+" sign.
+
 ## [1.2.2] - 2020-09-20
 ### Fixed
 - Generates a semantic version friendly version number when using git describe (i.e. replace "-" by "+").

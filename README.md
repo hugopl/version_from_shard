@@ -48,7 +48,12 @@ found or someone is compiling the project from a tarball, normal version will be
 
 Example:
 
-You have `version: 1.0.0` on your shard.yml file but your master branch is 1 commit ahead of the tag named `v1.0.0` that you released yesterday, in this case VersionFromShard.declare will declare a VERSION constant with the value `1.0.0+1+g2dd5299`, assuming `2dd5299` is the current commit hash, note the `g` prefix, that means git.
+You have `version: 1.0.0` on your shard.yml file but your master branch is 1 commit ahead of the tag named `v1.0.0` that you released yesterday, in this case VersionFromShard.declare will declare a VERSION constant with the value `1.0.0+1.g2dd5299`, assuming `2dd5299` is the current commit hash, note the `g` prefix, that means git.
+
+## About Semantic Version
+
+[This issue](https://github.com/semver/semver/issues/200) summarize the problems with semantic version and nightly builds
+when you don't know yet if the final version of your software will increase a major, minor or patch version.
 
 ## Development
 
