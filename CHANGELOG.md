@@ -1,3 +1,7 @@
+## [1.2.4] - 2021-08-26
+### Fixed
+- Works with Crystal >= 0.36.1
+
 ## [1.2.3] - 2021-03-22
 ### Fixed
 - Just read the semantic version spec to notice that the build part can't have a "+" sign.
