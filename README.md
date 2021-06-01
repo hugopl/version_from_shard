@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/hugopl/version_from_shard.svg?branch=master)](https://travis-ci.org/hugopl/version_from_shard)
+![Build Status](https://github.com/hugopl/version_from_shard/actions/workflows/ci.yml/badge.svg?branch=master)
 
 # Version From Shard
 
