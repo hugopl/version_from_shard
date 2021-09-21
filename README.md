@@ -29,7 +29,7 @@ end
 puts MyAwesomeApp::VERSION # Should print the version value found in shard.yml, e.g. "1.0.0"
 ```
 
-If you are developing a library is necessary to pass __DIR__ to the declare macro, otherwise when compiling a
+If you are developing a library is necessary to pass \_\_DIR__ to the declare macro, otherwise when compiling a
 application using your library it will show the version of the application instead the version of your library.
 So, on libraries do:
 
