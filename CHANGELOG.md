@@ -1,3 +1,7 @@
+## [1.2.5] - 2022-01-19
+### Fixed
+- You can use `crystal lib/version_from_shard/src/extract_version.cr | cut -d\" -f2` to fetch the project version.
+
 ## [1.2.4] - 2021-08-26
 ### Fixed
 - Works with Crystal >= 0.36.1
