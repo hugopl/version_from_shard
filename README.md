@@ -4,6 +4,20 @@
 
 A macro to declare the VERSION constant from the value found in `shard.yml`, so you don't need to write the same version number in multiple places.
 
+*⚠ Words of advise ⚠*
+
+I had been using this shard in multiple projects of mine, however nowadays I see that is more pratical to just do:
+
+```Crystal
+module MyShard
+  VERSION = {{ `shards version "#{__DIR__}"`.chomp.stringify }}
+end
+```
+
+The only difference is that you wont have the in between version numbers like `1.0.0+1.g2dd5299`, however for the sake of having less dependencies in my projects I'm starting to remove this dependency from all my projects.
+
+What's this means? This means that soon this project will be archived in github. 
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
